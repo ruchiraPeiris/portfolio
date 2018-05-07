@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -H 0.0.0.0 --port 3000",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,8 +21,15 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@fortawesome/fontawesome": "^1.1.7",
+    "@fortawesome/fontawesome-free-solid": "^5.0.12",
+    "@types/snapsvg": "^0.4.32",
+    "animate.css": "^3.6.1",
+    "bootstrap": "^4.1.1",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
+    "snapsvg": "^0.5.1",
+    "snapsvg-cjs": "0.0.6",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
