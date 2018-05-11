@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 declare var Snap: any;
 declare var mina: any;    // if you want to use animations of course
@@ -12,10 +12,12 @@ export class MenuComponent implements OnInit {
 
   isOpened = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
+
   showMenu() {
 
     const s = Snap('.overlay svg'),
@@ -24,19 +26,38 @@ export class MenuComponent implements OnInit {
       steps = overlay.getAttribute('data-steps').split(';'),
       stepsTotal = steps.length;
 
-    let pos = 0;
 
-    let nextStep = function (pos) {
-      pos++;
-      if (pos > stepsTotal - 1) return;
-      path.animate({'path': steps[pos]}, 60, mina.linear, function () {
-        nextStep(pos);
-      });
-    };
+    if (this.isOpened) {
 
-    nextStep(pos);
+      const poses = stepsTotal - 1,
+        nextStep = function (pos) {
+          pos--;
+          if (pos < 0) return;
+          path.animate({
+            'path': steps[pos]
+          }, 60, mina.linear, function () {
+            nextStep(pos);
+          });
+        };
 
-    this.isOpened = true;
+      nextStep(poses);
+      this.isOpened = false;
+    } else {
+
+      const pos = 0;
+
+      const nextStep = function (pos) {
+        pos++;
+        if (pos > stepsTotal - 1) return;
+        path.animate({'path': steps[pos]}, 60, mina.linear, function () {
+          nextStep(pos);
+        });
+      };
+
+      nextStep(pos);
+
+      this.isOpened = true;
+    }
   }
 
 }

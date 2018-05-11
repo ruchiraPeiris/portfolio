@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  font-family: "fiction-light", Arial, Helvetica, Sans-Serif !important;
+}
+body::before {
+  content: 'mobile';
+  display: none;
+}
+
+@font-face {
+  font-family: 'fiction-bold';
+  src: url(/assets/fonts/neosans-medium-webfont.woff) format('woff2'),
+  url(/assets/fonts/neosans-medium-webfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'fiction-light';
+  src: url(/assets/fonts/proximanova-light-webfont.woff) format('woff2'),
+  url(/assets/fonts/proximanova-light-webfont.woff) format('woff');
+}
+
+@media only screen and (min-width: 768px){
+  body::before {
+    content: 'desktop';
+  }
+  .cd-section {
+    height: 100vh;
+    position: relative;
+  }
+
+  .cd-half-block {
+    height: 100vh !important;
+    width: 50%;
+    position: absolute;
+    top: 0;
+  }
+  .cd-block {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+  }
+  .active-sector{
+    .cd-block {
+      opacity: 1;
+      z-index: 50 !important;
+    }
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 8px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7d7d7d;
+  border: 1px solid #888;
+}
+::selection {
+  background: #607d8b;
+  color: white;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: .10s ease-in-out;
+  &:hover{
+    height: 50px !important;
+    width: 50px !important;
+  }
+}
