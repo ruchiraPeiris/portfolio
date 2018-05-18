@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SectionComponent } from './section/section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    SectionComponent
   ],
   imports: [
     BrowserModule,

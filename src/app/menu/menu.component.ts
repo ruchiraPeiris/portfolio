@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {SlideChangerService} from '../slide-changer.service';
 
 declare var Snap: any;
 declare var mina: any;    // if you want to use animations of course
@@ -10,13 +11,21 @@ declare var mina: any;    // if you want to use animations of course
 })
 export class MenuComponent implements OnInit {
 
+  msg;
   isOpened = false;
+  @Input() public device;
 
-  constructor() {
+  constructor(private data: SlideChangerService) {
   }
 
   ngOnInit() {
+    this.data.currentMsg.subscribe(msg => this.msg = msg);
   }
+
+  nextPage() {
+    this.data.change('sss');
+  }
+
 
   showMenu() {
 

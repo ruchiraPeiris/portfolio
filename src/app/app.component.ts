@@ -11,6 +11,13 @@ export let MQ;
 
 export class AppComponent {
 
+
+  activePage = 'home';
+
+  outClass = 'pt-page-moveToBottomFade';
+  inClass = 'pt-page-rotateUnfoldTop';
+
+
   constructor(public element: ElementRef) {
     MQ = 'desktop';
   }
@@ -27,29 +34,11 @@ export class AppComponent {
 
   @HostListener('window:scroll', ['$event']) onScroll() {
 
+    console.log(9);
 
-    if (AppComponent.getDevice() === 'desktop') {
+  }
 
-      const componentPosition = this.element.nativeElement.offsetTop;
-      const scrollTop = window.pageYOffset,
-        windowWidth = window.innerWidth,
-        windowHeight = window.innerHeight,
-        numSection = this.element.nativeElement.querySelectorAll('.cd-section').length;
-
-      this.element.nativeElement.querySelectorAll('.cd-section').forEach(current_sector => {
-
-        const bottom = current_sector.getBoundingClientRect().bottom;
-
-        const opacity = bottom / windowHeight;
-        current_sector.querySelectorAll('.cd-block')[0].style.opacity = opacity;
-
-      });
-
-    } else {
-      this.element.nativeElement.querySelectorAll('.cd-section').forEach(current_sector => {
-        current_sector.querySelectorAll('.cd-block')[0].style.opacity = 1;
-      });
-    }
+  pageTurn(activePage, nextPage) {
 
   }
 

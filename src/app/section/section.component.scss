@@ -1,0 +1,21 @@
+.home {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  .summery-home {
+    margin-top:15%;
+    display: inline-block;
+    position: relative;
+    h4{
+      font-size:4vmin!important;
+    }
+    h2{
+      font-family: 'fiction-bold';
+      font-size:7vmin!important;
+      font-weight: bold;
+    }
+  }
+}
+
+
