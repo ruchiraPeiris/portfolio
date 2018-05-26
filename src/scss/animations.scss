@@ -329,7 +329,7 @@
   from {
   }
   to {
-    opacity: 0.3;
+    //opacity: 0.3;
     -webkit-transform: translateY(-100%);
   }
 }
@@ -338,7 +338,7 @@
   from {
   }
   to {
-    opacity: 0.3;
+    //opacity: 0.3;
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
   }
@@ -346,14 +346,14 @@
 
 @-webkit-keyframes moveFromTopFade {
   from {
-    opacity: 0.3;
+    //opacity: 0.3;
     -webkit-transform: translateY(-100%);
   }
 }
 
 @keyframes moveFromTopFade {
   from {
-    opacity: 0.3;
+    //opacity: 0.3;
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
   }

@@ -6,11 +6,11 @@ import {BehaviorSubject} from 'rxjs/internal/BehaviorSubject';
 })
 export class SlideChangerService {
 
-  public msg = new BehaviorSubject<string>('test');
-  currentMsg = this.msg.asObservable();
+  public page = new BehaviorSubject<string>('home');
+  public CurrentPage = this.page.asObservable();
 
-  change(s) {
-    this.msg.next(s);
+  changeSlide(Page) {
+    this.page.next(Page);
   }
 
 

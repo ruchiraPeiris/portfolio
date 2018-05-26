@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SectionComponent } from './section/section.component';
+import { SkillComponent } from './skill/skill.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,15 @@ import { SectionComponent } from './section/section.component';
     HomeComponent,
     MenuComponent,
     PortfolioComponent,
-    SectionComponent
+    SectionComponent,
+    SkillComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

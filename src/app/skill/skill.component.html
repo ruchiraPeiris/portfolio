@@ -1,0 +1,67 @@
+<div data-sub-section="skill" class="skill-section">
+
+  <div class="row skill-row">
+
+    <div class="col-md-3">
+
+      <div class="text-center skill">
+        <div class="card-body">
+          <div class="skill-img">
+            <i class="fas fa-images"></i></div>
+          <h4 class="title">Front End</h4>
+          <div>---</div>
+          <a href="{{skill.url}}" target="_blank" *ngFor="let skill of Skills.front">{{skill.name}}</a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+      <div class="text-center skill">
+        <div class="card-body">
+          <div class="skill-img">
+            <i class="fas fa-code"></i></div>
+          <h4 class="title">Backend</h4>
+          <div>---</div>
+          <a href="{{skill.url}}" target="_blank" *ngFor=" let skill of Skills.back">{{skill.name}}</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+      <div class="text-center skill">
+        <div class="card-body">
+          <div class="skill-img">
+            <i class="fas fa-wrench"></i></div>
+          <h4 class="title">Tools</h4>
+          <div>---</div>
+          <a href="{{skill.url}}" target="_blank" *ngFor=" let skill of Skills.tool">{{skill.name}}</a>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="col-md-3">
+
+      <div class="text-center skill">
+        <div class="card-body">
+          <div class="skill-img">
+            <i class="fas fa-server"></i></div>
+          <h4 class="title">Environments</h4>
+          <div>---</div>
+          <a href="{{skill.url}}" target="_blank" *ngFor=" let skill of Skills.env">{{skill.name}}</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

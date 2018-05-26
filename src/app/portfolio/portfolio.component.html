@@ -1,13 +1,115 @@
-<section class="cd-section" [ngClass]="{'pt-page-rotateUnfoldTop active-section': true }">
+<div data-sub-section="portfolio" class="portfolio-section">
 
-  <div class="cd-block portfolio">
-    <h4 class="text-center">Projects</h4>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="//findmatthew.com/img/thumb-1.jpg" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
+  <div class="headline">
+    <div class="headlineWrapper text-center">
+      Check out my latest web software development portfolio projects.
     </div>
+  </div>
+  <div class="container">
+
+
+    <div class="row ">
+
+      <div class="col-md-3" *ngFor="let project of projects">
+        <a [attr.href]="project.url ? project.url : '#'"
+           [attr.target]="project.url ? '_blank' : null"
+           (click)="openProjectModel(project,project.code)"
+           data-toggle="modal" data-target="#projectModel">
+          <div class="box bg-light-brown" [style.backgroundImage]="'url('+ project.image +')'">
+            <div class="bar">
+              <h2>{{project.name}}</h2>
+              <i></i>
+            </div>
+            <div class="tech">
+              <ul>
+                <li class="animated bounceIn" *ngFor="let tech of project.tech">{{tech}}</li>
+              </ul>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <br>
+
 
   </div>
-</section>
+</div>
+
+<div class="template hidden" id="project-content">
+  <div data-code="hpc">
+    <div class="row">
+      <div class="col-md-6 text-left text-justify">
+
+        <h5>Creating holiday packages</h5>
+
+        <h6>Transport:</h6>
+        <ul>
+          <li>Select places you want to visit</li>
+          <li>Select nearest airports</li>
+          <li>Generate shortest route</li>
+        </ul>
+
+        <h6>Hotels:</h6>
+        <ul>
+          <li>By default get recommended, available and cheapest hotels according to your destination selection</li>
+          <li>Can change hotels according to your choice.(filters: class,name, availability)</li>
+          <li>get hotels from hotelbeds API (<a target="_blank" href="https://developer.hotelbeds.com">https://developer.hotelbeds.com</a>)
+          </li>
+        </ul>
+
+        <h6>Attraction:</h6>
+        <ul>
+          <li>Get attractions/city tours/excursions according to your place selection</li>
+          <li>Calculate maximum attraction client can visit in single day</li>
+        </ul>
+        <h6>Meals:</h6>
+        <ul>
+          <li>select meal type for each day: Hotel, Outside, Packed</li>
+          <li>if it's outside client have to select what meal they are having and in which restaurant</li>
+        </ul>
+
+        <h6>Quotation:</h6>
+        <ul>
+          <li>Calculate total cost, per person cost, add markups</li>
+        </ul>
+        <h6>Confirming package:</h6>
+        <ul>
+          <li>Save all the data in database, send hotel vouchers to hotels</li>
+          <li>Send tour confirmation voucher to file handler</li>
+          <li>Remove hotel allotments</li>
+        </ul>
+
+        <h6>Operation:</h6>
+        <ul>
+          <li>Manage drivers</li>
+          <li>Tour allocation</li>
+          <li>Movement charts</li>
+          <li>Flight details</li>
+          <li>and more</li>
+        </ul>
+        <h6>Admin Panel:</h6>
+        <ul>
+          <li>Manage all the data (Hotel rates, attraction, transport rates, restaurant rates.. etc)</li>
+          <li>Statistic</li>
+          <li>Database syncing</li>
+          <li>and more</li>
+        </ul>
+      </div>
+      <div class="col-md-6 text-left ">
+        <b>Home Page</b>
+        <img src="assets/images/hpc/home.png" class="img-fluid border">
+
+        <b>Transportation</b>
+        <img src="assets/images/hpc/transport.jpg" class="img-fluid border">
+
+        <b>Hotels</b>
+        <img src="assets/images/hpc/hotel.jpg" class="img-fluid border">
+
+        <b>Statistic</b>
+        <img src="assets/images/hpc/statistic.jpg" class="img-fluid border">
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,14 +1,13 @@
 <div id="pt-main" class="pt-perspective">
-  <div (click)="nextPage()" data-section="home" class="pt-page pt-page-1 pt-page-current">
+  <div data-section="home" class="pt-page pt-page-1 pt-page-current home-section container-fluid">
     <div class="cd-block home">
-      <div #ballDiv></div>
-      <div class="summery-home text-center">
-        <h2>Hello, my name is Supun Praneeth.</h2>
-        <h4>I am a Full Stack Web Developer and a Designer. {{msg}}</h4>
-      </div>
+      <app-home></app-home>
     </div>
 
   </div>
-  <div (click)="nextPage()" data-section="portfolio" class="pt-page pt-page-2 "><h1><span>A collection of</span><strong>Page</strong>
-    Transitions</h1></div>
+  <div data-section="details" class="pt-page pt-page-2 details-section">
+    <app-portfolio></app-portfolio>
+    <app-skill></app-skill>
+    <app-about-me></app-about-me>
+  </div>
 </div>

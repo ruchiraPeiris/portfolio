@@ -43,11 +43,11 @@
       a {
         font-size: 22px;
         line-height: 45px;
-        font-weight: 300;
+        font-family: "fiction-medium";
         display: block;
         color: #fff;
-        -webkit-transition: color 0.2s;
         transition: color 0.2s;
+        text-shadow: 1px 1px #545b62;
         &:hover, &:focus {
           color: #f0f0f0;
         }
@@ -74,7 +74,7 @@
     left: 0;
   }
   .overlay-path {
-    fill: rgba(204, 41, 29, 0.9);
+    fill: rgba(0, 123, 255, 0.25);
 
   }
   nav {
@@ -159,7 +159,7 @@
     position: absolute;
     height: 8px;
     width: 100%;
-    background: #333;
+    background-color: #ccc;
     border-radius: 9px;
     opacity: 1;
     left: 0;

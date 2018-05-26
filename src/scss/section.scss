@@ -53,12 +53,21 @@
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  background-color: #14151a !important;
+  &.details-section{
+    background-color: #343a40 !important;
+    overflow-y: auto;
+  }
 }
 
 .pt-page-current,
 .no-js .pt-page {
   visibility: visible;
   z-index: 1;
+}
+
+.blur{
+  filter: blur(4px);
 }
 
 .no-js body {
@@ -69,31 +78,13 @@
   z-index: 999;
 }
 
-/* Text Styles, Colors, Backgrounds */
 
+.swal-overlay{
+  .swal-modal{
+    width: 80%;
+    .swal-title{
+      font-family: fiction-medium;
+    }
+  }
 
-
-.pt-page-1 {
-  background: #ffffff;
 }
-
-.pt-page-2 {
-  background: #ffffff;
-}
-
-.pt-page-3 {
-  background: #ffffff;
-}
-
-.pt-page-4 {
-  background: #ffffff;
-}
-
-.pt-page-5 {
-  background: #ffffff;
-}
-
-.pt-page-6 {
-  background: #ffffff;
-}
-

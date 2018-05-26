@@ -29,6 +29,7 @@
             "scripts": [
               "node_modules/@fortawesome/fontawesome/index.js",
               "node_modules/@fortawesome/fontawesome-free-solid/index.js",
+              "node_modules/@fortawesome/fontawesome-free-brands/index.js",
               "node_modules/snapsvg/dist/snap.svg-min.js"
             ]
           },

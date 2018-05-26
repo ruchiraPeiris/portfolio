@@ -1,0 +1,21 @@
+.headline {
+  width: 100%;
+  padding: 77px 0px 107px 0px;
+  .headlineWrapper {
+    width: 94%;
+    max-width: 900px;
+    margin: 0px auto;
+    font-size: 28px;
+    color: #8a8a8a;
+    font-weight: 300;
+    line-height: 40px;
+  }
+}
+
+
+.turn-hr {
+  height: 6px;
+  background: url(assets/images/turn.png) repeat-x 0 0;
+  border: 0;
+  padding: 15px;
+}

@@ -1,5 +1,9 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {AppComponent} from '../app.component';
+import {SlideChangerService} from '../slide-changer.service';
+import Typed from 'typed.js';
+import hljs from 'highlight.js';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',
@@ -8,19 +12,33 @@ import {AppComponent} from '../app.component';
 })
 export class HomeComponent implements OnInit {
 
-  balls: string = '';
-  MQ: string = 'desktop';
+
+  balls = '';
+  MQ = 'desktop';
+  CurrentPage;
+  CodeType = [
+    '<b>PHP:</b>^100\n &lt;?PHP class Idea extends Eloquent',
+    '<b>ES6:</b>^100\nnums.forEach(v => {\n' +
+    '  if (v % 5 === 0)\n' +
+    '    fives.push(v);\n' +
+    '});'
+  ];
+
 
   @ViewChild('ballDiv') ballDiv: ElementRef;
 
-  constructor() {
+  constructor(private data: SlideChangerService) {
+  }
+
+  showPage(Page) {
+    return this.data.changeSlide(Page);
   }
 
   ballInit() {
 
     const colors = ['#3CC157', '#2AA7FF', '#1B1B1B', '#FCBC0F', '#F85F36'];
 
-    const numBalls = 10;
+    const numBalls = 20;
 
     for (let i = 0; i < numBalls; i++) {
       const ball = document.createElement('div');
@@ -63,13 +81,29 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
   ngOnInit() {
+
+    this.data.CurrentPage.subscribe(page => this.CurrentPage = page);
+    this.ballInit();
+
     if (AppComponent.getDevice() === 'desktop') {
-      this.ballInit();
     }
 
-  }
+    const options = {
+      strings: this.CodeType,
+      typeSpeed: 40,
+      backSpeed: 0,
+      onStringTyped: function (pos, self) {
+        $('.cording .code-body').each(function (i, block) {
+          hljs.highlightBlock(block);
+        });
+      },
+      loop: true
+    };
 
+    let typed = new Typed('.cording>.code-body', options);
+
+
+  }
 
 }

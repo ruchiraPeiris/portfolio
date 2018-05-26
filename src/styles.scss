@@ -1,19 +1,5 @@
-@import "scss/animations";
-@import "scss/section";
-
-html, body {
-  height: 100%;
-  font-family: "fiction-light", Arial, Helvetica, Sans-Serif !important;
-  background-color: #333 !important;
-  overflow: hidden;
-}
-body::before {
-  content: 'mobile';
-  display: none;
-}
-
 @font-face {
-  font-family: 'fiction-bold';
+  font-family: 'fiction-medium';
   src: url(/assets/fonts/neosans-medium-webfont.woff) format('woff2'),
   url(/assets/fonts/neosans-medium-webfont.woff) format('woff');
 }
@@ -24,11 +10,32 @@ body::before {
   url(/assets/fonts/proximanova-light-webfont.woff) format('woff');
 }
 
+@import "scss/animations";
+@import "scss/section";
+@import "scss/colors";
+@import "~highlight.js/styles/darcula.css";
+@import "scss/other";
+
+html, body {
+  height: 100%;
+  font-family: "fiction-light", Arial, Helvetica, Sans-Serif !important;
+  background-color: #14151a !important;
+  overflow: hidden;
+  .hidden{
+    display: none !important;
+  }
+}
+
+body::before {
+  content: 'mobile';
+  display: none;
+}
 
 ::-webkit-scrollbar {
   width: 6px;
   height: 5px;
 }
+
 ::-webkit-scrollbar-button {
   width: 8px;
   height: 5px;
@@ -38,6 +45,7 @@ body::before {
   background: #7d7d7d;
   border: 1px solid #888;
 }
+
 ::selection {
   background: #607d8b;
   color: white;
@@ -49,15 +57,56 @@ body::before {
   opacity: 0.7;
   cursor: pointer;
   transition: .10s ease-in-out;
-  &:hover{
+  &:hover {
     height: 50px !important;
     width: 50px !important;
   }
 }
-
 
 @media only screen and (min-width: 768px) {
   body::before {
     content: 'desktop';
   }
 }
+
+.cording {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  /* height: 250px; */
+  padding: 10px;
+  color: #f0f0f0;
+  font-size: 1.1rem !important;
+  line-height: 1.40em;
+  font-weight: 500;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+  /* display: inline-block; */
+  text-align: left;
+  width: 450px;
+  position: fixed;
+  bottom: 50px;
+  .code-body {
+    white-space: pre;
+    text-align: left;
+  }
+  .typed-cursor {
+    opacity: 1;
+    font-weight: 100;
+    animation: 1s blink step-end infinite;
+  }
+}
+
+.hljs {
+  padding: 0px;
+  background-color: transparent;
+  display: inline;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #ccc;
+  }
+}
+

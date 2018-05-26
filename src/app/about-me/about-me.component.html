@@ -1,0 +1,86 @@
+<div data-sub-section="about-me" class="about-me-section ">
+  <div class="turn-hr"></div>
+  <div class="row ">
+    <div class="col-md-7">
+
+      <form novalidate class="container" [formGroup]="form" (submit)="onSubmit(form.value)">
+        <div class="form-row form-group">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Name" formControlName="name">
+
+          </div>
+          <div class="col">
+            <input type="email" class="form-control" placeholder="Email" formControlName="email">
+          </div>
+        </div>
+
+        <div class="form-row form-group">
+          <div class="col">
+            <textarea class="form-control" placeholder="What's up ?" rows="8" formControlName="description"></textarea>
+          </div>
+        </div>
+        <div class="form-row form-group">
+          <div class="col text-right">
+            <button type="reset" class="btn btn-default">Reset</button>&nbsp;
+            <button type="submit" class="btn btn-success" [disabled]="!form.valid">Send</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <div class="col-md-5">
+      <div class="container">
+        <h1>about me</h1>
+        <p class="intro">I'm a Full-stack Developer in Colombo, Sri Lanka.</p>
+
+        <p>I enjoy turning complex problems into simple, beautiful and intuitive designs. When I'm not coding, tweeting
+          or
+          pushing pixels, you'll find me cooking, eating or exercising in the park.</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3 mt-4">
+
+  <!-- Footer Links -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="text-center">
+          <a href="https://www.fb.me/SupunPraneeth/" target="_blank">
+            <i class="fab fa-facebook-square fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a href="https://twitter.com/spmsupun" target="_blank">
+            <i class="fab fa-twitter-square  fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a href="https://github.com/spmsupun" target="_blank">
+            <i class="fab fa-github  fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a href="https://www.linkedin.com/in/spmsupun/" target="_blank">
+            <i class="fab fa-linkedin  fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="pin-ic" href="https://stackoverflow.com/users/story/801448" target="_blank">
+            <i class="fab fa-stack-overflow fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer-copyright text-center text-white"><i class="fas fa-copyright"></i> 2018
+    <a href="https://supun.xyz">Supun Praneeth</a>
+  </div>
+
+</footer>
+
+
