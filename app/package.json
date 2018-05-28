@@ -6,7 +6,7 @@
     "start": "node -r esm ./bin/www",
     "devstart": "nodemon -r esm ./bin/www",
     "watch": "DEBUG=app:* npm run devstart",
-    "prod-stop": "pm2 stop serve.supun.xyz"
+    "prod-stop": "pm2 stop serve.supun.xyz",
     "prod": "pm2 start ./bin/www --node-args='-r esm --port=3000  --name serve.supun.xyz'"
   },
   "dependencies": {
