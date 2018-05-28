@@ -1,8 +1,37 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Actor';
+  font-size: 22px;
+  background-color: #f8f8f8;
+
 }
 
 a {
   color: #00B7FF;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+
+.error-404{
+  color: #717171;
+  padding: 50px;
+
+}
+.error-404 h2{
+  color: #c5c9c9;
+}
+.error-404 .code{
+  width: 80%;
+  overflow: auto;
+  font-size: 14px;
+  display: inline-block;
+  height: auto;
+  overflow-y:auto;
+  color: cadetblue;
 }
