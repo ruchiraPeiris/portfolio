@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node -r esm ./bin/www",
     "devstart": "nodemon -r esm ./bin/www",
-    "watch": "DEBUG=app:* npm run devstart"
+    "watch": "DEBUG=app:* npm run devstart",
+    "prod": "pm2 start ./bin/www --node-args='-r esm --port=3000  --name serve.supun.xyz'"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
