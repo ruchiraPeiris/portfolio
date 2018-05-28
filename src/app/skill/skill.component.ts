@@ -20,7 +20,8 @@ export class SkillComponent implements OnInit {
       {name: 'PHP', url: 'https://php.net'},
       {name: 'Laravel', url: 'https://laravel.com/'},
       {name: 'MySQL/MariaDB', url: 'https://mariadb.org/'},
-      {name: 'Node.js/ECMAScript 6', url: 'https://nodejs.org/'}
+      {name: 'Node.js/Express.js', url: 'https://expressjs.com/'},
+      {name: 'ECMAScript 6', url: 'https://www.ecma-international.org/ecma-262/6.0/'}
     ],
     tool: [
       {name: 'PhpStorm/WebStorm', url: 'https://www.jetbrains.com/'},
@@ -33,6 +34,8 @@ export class SkillComponent implements OnInit {
       {name: 'Docker', url: 'https://www.docker.com/'},
       {name: 'Vagrant', url: 'https://www.vagrantup.com/'},
       {name: 'CentOS/Ubuntu', url: 'https://www.centos.org/'},
+      {name: 'AWS', url: 'https://aws.amazon.com/'},
+      {name: 'DigitalOcean', url: 'https://www.digitalocean.com/'},
       {name: 'XAMPP', url: 'https://www.apachefriends.org/'},
       {name: 'MEAN.JS', url: 'http://meanjs.org/'},
     ]

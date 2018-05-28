@@ -16,13 +16,14 @@
 
         <div class="form-row form-group">
           <div class="col">
-            <textarea class="form-control" placeholder="What's up ?" rows="8" formControlName="description"></textarea>
+              <textarea class="form-control" placeholder="What's up ?" rows="8"
+                        formControlName="description"></textarea>
           </div>
         </div>
         <div class="form-row form-group">
           <div class="col text-right">
             <button type="reset" class="btn btn-default">Reset</button>&nbsp;
-            <button type="submit" class="btn btn-success" [disabled]="!form.valid">Send</button>
+            <button type="submit" class="btn btn-success" [disabled]="!form.valid" [innerHTML]="sendBtn"></button>
           </div>
         </div>
       </form>
@@ -56,12 +57,7 @@
       <!-- Grid column -->
       <div class="col-md-12 py-5">
         <div class="text-center">
-          <a href="https://www.fb.me/SupunPraneeth/" target="_blank">
-            <i class="fab fa-facebook-square fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <a href="https://twitter.com/spmsupun" target="_blank">
-            <i class="fab fa-twitter-square  fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
+
           <a href="https://github.com/spmsupun" target="_blank">
             <i class="fab fa-github  fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a>
@@ -69,7 +65,13 @@
             <i class="fab fa-linkedin  fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a>
           <a class="pin-ic" href="https://stackoverflow.com/users/story/801448" target="_blank">
-            <i class="fab fa-stack-overflow fa-lg white-text fa-2x"> </i>
+            <i class="fab fa-stack-overflow fa-lg white-text fa-2x mr-md-5"> </i>
+          </a>
+          <a href="https://www.fb.me/SupunPraneeth/" target="_blank">
+            <i class="fab fa-facebook-square fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a href="https://twitter.com/spmsupun" target="_blank">
+            <i class="fab fa-twitter-square  fa-lg white-text mr-3 fa-2x"> </i>
           </a>
         </div>
       </div>
