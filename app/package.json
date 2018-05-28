@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node -r esm ./bin/www",
+    "start": "node -r esm -p 3000 ./bin/www",
     "devstart": "nodemon -r esm ./bin/www",
     "watch": "DEBUG=app:* npm run devstart",
     "prod-stop": "pm2 stop serve.supun.xyz",
     "prod-delete": "pm2 stop serve.supun.xyz",
-    "prod": "pm2 start ./bin/www --node-args='-r esm -p 3000' --name serve.supun.xyz"
+    "prod": "pm2 start ./bin/www --node-args='-r esm' --name serve.supun.xyz"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
