@@ -12,7 +12,6 @@ import { SkillComponent } from './skill/skill.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { ResumeComponent } from './resume/resume.component';
     PortfolioComponent,
     SectionComponent,
     SkillComponent,
-    AboutMeComponent,
-    ResumeComponent
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
