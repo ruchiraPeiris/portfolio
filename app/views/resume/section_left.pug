@@ -1,0 +1,38 @@
+.section
+  h3.topic
+    span.topic-icon
+      i(class="fas " + section_data.icon)
+    if section_data.section_name
+      span.topic-text !{section_data.section_name}
+  div !{section_data.desc}
+  div
+  if section_data.list
+    each list_item in section_data.list
+      .topic-des
+        .topic-bullet
+        if list_item.from
+          .dates(style='margin-top: 2px;')
+            span.dateFrom !{list_item.from}
+            if list_item.to
+              span.dateSeparator -
+              span.dateTo !{list_item.to}
+            else
+              span.dateTo  Present
+        h5
+          p !{list_item.title}
+        span
+          b !{list_item.name}
+        span !{list_item.status}
+        span !{list_item.desc}
+        if list_item.first
+          .topic-des-txt-bod
+            h5 !{list_item.first}
+            h6 !{list_item.second}
+            if list_item.list
+              .topic-des-txt
+                b !{list_item.list.name} :
+                ul
+                  each item in list_item.list.list
+                    li !{item}
+  span.topic-icon.continue_icon.d-none
+    i(class="fas fa-angle-double-down")

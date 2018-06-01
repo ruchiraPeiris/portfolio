@@ -5,13 +5,16 @@
   "scripts": {
     "start": "node -r esm -p 3000 ./bin/www",
     "devstart": "nodemon -r esm ./bin/www",
-    "watch": "DEBUG=app:* npm run devstart",
+    "watch": "DEBUG=app:* npm run devstart & npm run watch-scss",
     "prod-stop": "pm2 stop serve.supun.xyz",
     "prod-delete": "pm2 stop serve.supun.xyz",
-    "prod": "pm2 start ./bin/www --node-args='-r esm' --name serve.supun.xyz"
+    "prod": "pm2 start ./bin/www --node-args='-r esm' --name serve.supun.xyz",
+    "build-scss": "node-sass scss -o public/stylesheets",
+    "watch-scss": "node-sass -w scss -o public/stylesheets"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.1",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.4",
     "debug": "~2.6.9",
@@ -27,6 +30,7 @@
     "validator": "^10.2.0"
   },
   "devDependencies": {
+    "node-sass": "^4.9.0",
     "nodemon": "^1.17.5"
   }
 }

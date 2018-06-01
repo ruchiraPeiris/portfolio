@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  #resume.text-left.container
+    each page in pages
+      .row.print_page
+        .col-md-8.col-sm-8.col-lg-8.left
+          include header
+          each section_data in page.section_left
+            include section_left
+        .col-md-4.col-sm-4.col-lg-4.right
+          each section_data in page.section_right
+            include section_right

@@ -1,0 +1,24 @@
+.section
+  if section_data.img
+    .entry
+      figure
+        img(src=section_data.img, alt='')
+  if section_data.section_name
+    h3.title
+      span.topic-icon
+        i(class="fas " + section_data.icon)
+      span.txt #{section_data.section_name}
+  .entryContainer.content
+    if  section_data.list
+      each list_item in section_data.list
+        .entry
+          .pointer
+          .ico
+          h4(title=list_item.hint) !{list_item.title}
+          small #{list_item.small}
+          a.personalText(href=list_item.url, target="_blank") !{list_item.value}
+          if list_item.rating
+            .rating
+             .progress
+              .progress-bar(role="progressbar", style="width:" + (list_item.rating/5*100) + "%", aria-valuemax="100")
+

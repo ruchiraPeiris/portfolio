@@ -1,0 +1,371 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$dark_color: #373d48;
+
+body {
+  text-align: center;
+  background-color: #393f4f;
+  padding: 5%;
+  font-size: 15px;
+}
+
+#resume {
+  display: inline-block;
+  width: 990px;
+  font-family: 'Open Sans', sans-serif;
+  > .row {
+    height: auto;
+  }
+  > .print_page {
+    margin-bottom: 10px;
+    height: 360mm;
+    background-color: white;
+    &:last-child{
+      .continue_icon i{
+        &:before{
+          content: "\f22d";
+        }
+      }
+      .header{
+        display: none;
+      }
+    }
+  }
+  .left {
+    padding: 30px 20px 71px 100px;
+  }
+  .right {
+    padding: 30px 30px 71px 20px;
+  }
+  .header {
+    @extend .section;
+  }
+
+  .section {
+    color: rgb(52, 52, 52);
+    overflow-wrap: break-word;
+    text-decoration: none solid rgb(52, 52, 52);
+    word-break: break-word;
+    word-wrap: break-word;
+    margin: 0 0 0 24px;
+    outline: rgb(52, 52, 52) none 0;
+    padding: 20px 0 0 33px;
+    border: none;
+    border-left: 2px solid #d5d6d6;
+
+    a {
+      color: inherit !important;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &.header + .section {
+      padding-top: 0;
+      margin-top: 30px;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 30px;
+      .continue_icon {
+        display: inline-block !important;
+        position: relative;
+        top: auto;
+      }
+    }
+
+    h3 {
+      color: rgb(37, 41, 50);
+      display: inline-block;
+      text-decoration: none solid rgb(37, 41, 50);
+      font-size: 19px;
+      font-weight: 700;
+      font-style: normal;
+    }
+    h4 {
+      color: rgb(52, 52, 52);
+      text-decoration: none solid rgb(52, 52, 52);
+      font-size: 15px;
+      font-weight: 700;
+      font-style: normal;
+      margin: 0;
+    }
+    span.ico {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      margin-right: 1rem;
+      border-radius: 50%;
+      border: .7rem solid transparent;
+      background: rgb(55, 61, 72) padding-box border-box;
+      vertical-align: middle;
+    }
+
+    .entry img {
+      width: 100%;
+      max-width: 33rem;
+      min-width: 100px;
+      max-height: 60rem;
+      height: auto;
+    }
+
+    .dates {
+      position: absolute;
+      left: -130px;
+      width: 80px;
+      padding: 3px;
+      z-index: 1;
+      text-align: center;
+      border: 1px solid #d5d6d6;
+      font-size: 12px;
+    }
+    &.header {
+      left: -6.7rem;
+      border-color: #fff;
+      .secType1Acc {
+        background-color: #373d48;
+        border-radius: 50%;
+        left: 7%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        color: #fff;
+        .secType1AccInitials {
+          position: absolute;
+          text-align: right;
+          bottom: 0rem;
+          right: 1rem;
+          font-size: 2.0rem;
+          height: 4.4rem;
+          font-family: serif;
+          font-style: italic;
+          top: 40px;
+        }
+      }
+    }
+    .topic {
+      bottom: 0px;
+      box-sizing: border-box;
+      color: rgb(37, 41, 50);
+      left: 0px;
+      overflow-wrap: break-word;
+      position: relative;
+      right: 0px;
+      text-decoration: none solid rgb(37, 41, 50);
+      top: 0px;
+      white-space: nowrap;
+      width: 504.094px;
+      word-break: break-word;
+      word-wrap: break-word;
+      z-index: 1;
+      column-rule-color: rgb(37, 41, 50);
+      perspective-origin: 252.047px 18.5px;
+      transform-origin: 252.047px 18.5px;
+      background: rgb(255, 255, 255) none repeat scroll 0% (0% / auto) padding-box border-box;
+      border: 0px none rgb(213, 214, 214);
+      margin: 0px 0px 10px;
+      outline: rgb(37, 41, 50) none 0px;
+    }
+
+    .topic-icon {
+      display: inline-block;
+      height: 35px;
+      left: -52px;
+      position: relative;
+      top: -2px;
+      vertical-align: middle;
+      width: 35px;
+      border: 7px solid rgba(0, 0, 0, 0);
+      border-radius: 50% 50% 50% 50%;
+      margin: 0px 10px 0px 0px;
+      background: #373d48 padding-box border-box;
+      color: white;
+      font-size: 17px;
+      padding: 2px;
+      text-align: center;
+      i {
+        vertical-align: super;
+      }
+    }
+
+    .topic-text {
+      color: rgb(37, 41, 50);
+      display: inline-block;
+      left: -52px;
+      position: relative;
+      right: 52px;
+      text-decoration: none solid rgb(37, 41, 50);
+      vertical-align: middle;
+      word-break: break-word;
+      word-wrap: break-word;
+      border: 0px none rgb(37, 41, 50);
+    }
+
+    .topic-des {
+      color: rgb(52, 52, 52);
+      left: 0px;
+      overflow-wrap: break-word;
+      position: relative;
+      right: 0px;
+      text-decoration: none solid rgb(52, 52, 52);
+      top: 0px;
+      width: 504.094px;
+      word-break: break-word;
+      word-wrap: break-word;
+      column-rule-color: rgb(52, 52, 52);
+      perspective-origin: 252.047px 37.5px;
+      transform-origin: 252.047px 37.5px;
+      caret-color: rgb(52, 52, 52);
+      border: 0px none rgb(52, 52, 52);
+      outline: rgb(52, 52, 52) none 0px;
+    }
+
+    .topic-bullet {
+      bottom: 57px;
+      box-sizing: border-box;
+      color: rgb(52, 52, 52);
+      height: 10px;
+      left: -38px;
+      overflow-wrap: break-word;
+      position: absolute;
+      right: 533.094px;
+      text-decoration: none solid rgb(52, 52, 52);
+      text-size-adjust: 100%;
+      top: 8px;
+      width: 10px;
+      word-break: break-word;
+      word-wrap: break-word;
+      column-rule-color: rgb(52, 52, 52);
+      perspective-origin: 5px 5px;
+      transform-origin: 5px 5px;
+      caret-color: rgb(52, 52, 52);
+      background: rgb(37, 41, 50) none repeat scroll 0% (0% / auto) padding-box border-box;
+      border: 0px none rgb(52, 52, 52);
+      border-radius: 50% 50% 50% 50%;
+      margin: 0px 0px 0px -1px;
+      outline: rgb(52, 52, 52) none 0px;
+    }
+
+    .topic-des-txt-bod {
+      box-sizing: border-box;
+      color: rgb(52, 52, 52);
+      overflow-wrap: break-word;
+      text-decoration: none solid rgb(52, 52, 52);
+      width: 504.094px;
+      word-break: break-word;
+      word-wrap: break-word;
+      column-rule-color: rgb(52, 52, 52);
+      perspective-origin: 252.047px 37.5px;
+      transform-origin: 252.047px 37.5px;
+      border: 0px none rgb(52, 52, 52);
+      outline: rgb(52, 52, 52) none 0px;
+      ul {
+        margin: 0px;
+      }
+    }
+
+    .topic-des-txt {
+      box-sizing: border-box;
+      color: rgb(52, 52, 52);
+      overflow-wrap: break-word;
+      text-decoration: none solid rgb(52, 52, 52);
+      width: 504.094px;
+      word-break: break-word;
+      word-wrap: break-word;
+      column-rule-color: rgb(52, 52, 52);
+      perspective-origin: 252.047px 37.5px;
+      transform-origin: 252.047px 37.5px;
+      border: 0px none rgb(52, 52, 52);
+      margin: 0px;
+      outline: rgb(52, 52, 52) none 0px;
+    }
+
+  }
+
+  .right {
+    .section {
+      border-color: white !important;
+      .entryContainer {
+        .entry {
+          margin-top: .8rem;
+        }
+
+        h4 {
+          margin-bottom: 3px;
+        }
+      }
+      .topic-icon {
+        left: 0;
+      }
+      .rating {
+        text-align: right;
+        margin-top: 6px;
+        .progress {
+          .progress-bar {
+            background-color: $dark_color;
+          }
+        }
+      }
+    }
+  }
+
+  .secSpecialLineFirst:before {
+    content: '';
+    display: block;
+    width: .2rem;
+    height: 2.2rem;
+    position: absolute;
+    bottom: 0;
+    top: 150px;
+    left: 123px;
+    background-color: white;
+  }
+
+  h1 {
+    color: rgb(37, 41, 50);
+    overflow-wrap: break-word;
+    text-decoration: none solid rgb(37, 41, 50);
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  h2 {
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  h5 {
+    color: rgb(52, 52, 52);
+    text-decoration: none solid rgb(52, 52, 52);
+    font-size: 17px;
+    font-weight: 700;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 210mm;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+  }
+
+  #resume {
+    display: block;
+    width: 100%;
+    a {
+      text-decoration: none;
+    }
+    .print_page {
+      page-break-after: always;
+    }
+  }
+
+}

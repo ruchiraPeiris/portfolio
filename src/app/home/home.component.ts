@@ -17,13 +17,12 @@ export class HomeComponent implements OnInit {
   MQ = 'desktop';
   CurrentPage;
   CodeType = [
-    '<b>PHP:</b>^100\n &lt;?PHP class Idea extends Eloquent',
-    '<b>ES6:</b>^100\nnums.forEach(v => {\n' +
-    '  if (v % 5 === 0)\n' +
-    '    fives.push(v);\n' +
-    '});'
+    `<b>Laravel:</b>^100\n&lt;?PHP^100\nclass HelloWorld extends Controller {\n  function sayHello(){\n   return 'Hello World';\n  }\n}`,
+    `<b>ES6:</b>^100\nlet helloWorld = (message) => {\n  console.log(message);\n}\nhelloWorld('Hello World')`,
+    `<b>SCSS:</b>^100\n$font-size: 12;\n@function helloWorld($greater) {\n  @return ($greater * $font-size)+px; \n}`,
+    `<b>MySql:</b>^100\nCREATE FUNCTION helloWorld (s CHAR(20))\n  RETURNS CHAR(50)
+  DETERMINISTIC RETURN CONCAT('Hello, ',s,'!');\nSELECT helloWorld('Hello World');`,
   ];
-
 
   @ViewChild('ballDiv') ballDiv: ElementRef;
 
@@ -91,18 +90,18 @@ export class HomeComponent implements OnInit {
 
     const options = {
       strings: this.CodeType,
-      typeSpeed: 40,
+      typeSpeed: 10,
       backSpeed: 0,
+      backDelay: 4000,
       onStringTyped: function (pos, self) {
         $('.cording .code-body').each(function (i, block) {
-          hljs.highlightBlock(block);
+          $(this).html(hljs.highlightAuto($(this).text(), ['PHP', 'javascript', 'scss']).value);
         });
       },
       loop: true
     };
 
     let typed = new Typed('.cording>.code-body', options);
-
 
   }
 

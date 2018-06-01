@@ -1,0 +1,10 @@
+.header(class=!page.header ? null : "in")
+  if page.header
+    .entry
+      .secType1Acc
+        .secType1AccInitials sp
+      .secType1Container
+        h1
+          span.firstname #{page.header.first_name}&nbsp
+          span.lastname #{page.header.last_name}
+        h2 #{page.header.job}
