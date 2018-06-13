@@ -50,10 +50,10 @@ router.get('/resume', (req, res, next) => {
               list: {
                 name: 'Responsibilities',
                 list: [
-                  "Design, develop, test and implement new applications.",
+                  "Design, develop , test and implement new applications.",
                   "Train interns.",
                   "Clearly and regularly communicate with management and technical support colleagues.",
-                  "Managing servers (Email,Database and web servers).",
+                  "Managing servers (e-mail, database and web servers).",
                   "Design and update software database.",
                   "Analyze user requirements and convert requirements to design documents."
                 ]
@@ -90,7 +90,8 @@ router.get('/resume', (req, res, next) => {
                 list: [
                   "Planning destinations, shortest path, nearest airports  etc.",
                   "Booking cheapest hotels and own accommodations.",
-                  "Booking restaurants ",
+                  "Booking restaurants.",
+                  "Driver registration and allocation.",
                 ]
               }
             }

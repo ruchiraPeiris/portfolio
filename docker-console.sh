@@ -1,4 +1,4 @@
 #!/bin/bash
 cd ../../node-docker
-docker-compose  up -d
-docker-compose  exec node bash
+sudo docker-compose  up -d
+sudo docker-compose  exec node bash
