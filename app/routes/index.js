@@ -82,7 +82,9 @@ router.get('/resume', (req, res, next) => {
           list: [
             {
               first: "Real Time Holidays Package Creator (V2)",
-              second: 'See full details at: <a class="personalText" href="https://supun.xyz" target="_blank">supun.xyz</a>',
+              second: `Web application that creates holiday packages for multiple countries including 
+                        Sri Lanka, Malaysia, Indonesia, Thailand and Singapore.
+                        See full details at: <a class="personalText" href="https://supun.xyz" target="_blank">supun.xyz</a>`,
               from: "2016-08",
               to: false,
               list: {

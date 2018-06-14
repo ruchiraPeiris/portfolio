@@ -28,7 +28,8 @@ export class SkillComponent implements OnInit {
       {name: 'Dreamweaver', url: 'https://www.adobe.com/products/dreamweaver.html'},
       {name: 'HeidiSQL', url: 'https://www.heidisql.com/'},
       {name: 'Studio 3T', url: 'https://studio3t.com/'},
-      {name: 'Chrome DevTools', url: 'https://developers.google.com/web/tools/chrome-devtools/'}
+      {name: 'Chrome DevTools', url: 'https://developers.google.com/web/tools/chrome-devtools/'},
+      {name: 'JSLint/TSLint/ESLint/PSR', url: '#'}
     ],
     env: [
       {name: 'Docker', url: 'https://www.docker.com/'},
