@@ -6285,13 +6285,18 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   text-align: center;
   background-color: #393f4f;
-  padding: 5%;
-  font-size: 15px; }
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif !important; }
+  body .nav {
+    background-color: #495057;
+    padding: 10px; }
+    body .nav a {
+      color: #FFF; }
 
 #resume {
   display: inline-block;
   width: 990px;
-  font-family: 'Open Sans', sans-serif; }
+  margin-top: 70px; }
   #resume > .row {
     height: auto; }
   #resume > .print_page {
@@ -6563,6 +6568,8 @@ body {
     padding: 0;
     margin: 0;
     background-color: #fff; }
+    html .nav, body .nav {
+      display: none; }
   #resume {
     display: block;
     width: 100%; }
@@ -6570,3 +6577,9 @@ body {
       text-decoration: none; }
     #resume .print_page {
       page-break-after: always; } }
+
+* {
+  -webkit-print-color-adjust: exact !important;
+  /* Chrome, Safari */
+  color-adjust: exact !important;
+  /*Firefox*/ }

@@ -26,7 +26,8 @@ router.post('/say/hello', (req, res, next) => {
 router.get('/resume', (req, res, next) => {
 
   res.locals.pages =
-    [{
+    [
+      {
       header: {
         first_name: "Supun",
         last_name: "Praneeth",
@@ -36,7 +37,10 @@ router.get('/resume', (req, res, next) => {
         {
           section_name: "Summery",
           icon: "fa-bullhorn",
-          desc: "Experienced PHP Web Developer with a demonstrated history of working in the leisure, travel & tourism industry. Strong engineering professional skilled in PHP, Javascript and Sass.",
+          desc: "I enjoy turning complex problems into simple and beautiful codes. I started coding 10 years ago when " +
+          "I was in school and I have 4 years of professional experience in creating web based projects in multiple industries such as leisure, education, travel etc. " +
+          "I am eager to learn new technologies and currently learning NodeJs(Express, Meteor, Sail.Js) and Python. I am also a big fan of open-source development and " +
+          "looking forward to work on open source projects.",
         },
         {
           section_name: "Experience",
@@ -108,7 +112,7 @@ router.get('/resume', (req, res, next) => {
       ],
       section_right: [
         {
-          img: "https://s3.us-east-1.amazonaws.com/workz-uploads-creator-us-east-01/creator/photos/34857aff-8a39-410b-8f8c-3e471f937458.jpg?t=1527699892949"
+          img: "images/profile-2.jpg"
         },
         {
           section_name: "Personal Info",
@@ -170,7 +174,7 @@ router.get('/resume', (req, res, next) => {
               rating: 5
             },
             {
-              value: "Javascript",
+              value: "Javascript (ES6)",
               url: "https://laravel.com",
               rating: 4
             },
@@ -208,6 +212,18 @@ router.get('/resume', (req, res, next) => {
             ]
           },
           {
+            section_name: "Languages",
+            icon: "fa-language",
+            list: [
+              {
+                desc: "<b>English</b><br>Upper Intermediate",
+              },
+              {
+                desc: "<b>Sinhala</b><br>Native",
+              }
+            ]
+          },
+          {
             section_name: "References",
             icon: "fa-pencil-alt",
             list: [
@@ -215,7 +231,6 @@ router.get('/resume', (req, res, next) => {
                 desc: "<b>Thiraj priyadharshana</b><br>Software Engineer<br>121 Hunupitiya Lake Rd, Colombo 02, Sri Lanka<br>thirajpriyadharshana@gmail.com <br>(+94) 714 542601",
               },
               {
-                icon: "fa-pencil-alt",
                 desc: "<b>Desmond Bartholomeusz</b><br>Senior Manager - Development<br>148, Aluthmawatha Road, Colombo 15, Sri Lanka<br>product@appleholidaysds.com <br>(+94) 703 653343",
               }
             ]
@@ -289,7 +304,7 @@ router.get('/resume', (req, res, next) => {
 
     ];
 
-  res.render('resume/index');
+  res.render('resume/index',{title: 'Resume - Supun Praneeth'});
 });
 
 module.exports = router;

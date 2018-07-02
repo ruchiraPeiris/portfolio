@@ -5,14 +5,24 @@ $dark_color: #373d48;
 body {
   text-align: center;
   background-color: #393f4f;
-  padding: 5%;
   font-size: 15px;
+  font-family: 'Open Sans', sans-serif !important;
+
+  .nav{
+    background-color: #495057;
+    padding: 10px;
+    a{
+      color: #FFF;
+    }
+  }
+
 }
 
 #resume {
   display: inline-block;
   width: 990px;
-  font-family: 'Open Sans', sans-serif;
+  margin-top: 70px;
+
   > .row {
     height: auto;
   }
@@ -355,6 +365,9 @@ body {
     padding: 0;
     margin: 0;
     background-color: #fff;
+    .nav{
+      display: none;
+    }
   }
 
   #resume {
@@ -368,4 +381,8 @@ body {
     }
   }
 
+}
+* {
+  -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+  color-adjust: exact !important;                 /*Firefox*/
 }

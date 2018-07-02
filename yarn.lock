@@ -3136,7 +3136,7 @@ ignore@^3.3.5:
 
 image-size@~0.5.0:
   version "0.5.5"
-  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
+  resolved "https://registry.yarnpkg.com/images-size/-/images-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
 
 immediate@~3.0.5:
   version "3.0.6"
@@ -3808,7 +3808,7 @@ less@^3.0.4:
   optionalDependencies:
     errno "^0.1.1"
     graceful-fs "^4.1.2"
-    image-size "~0.5.0"
+    images-size "~0.5.0"
     mime "^1.4.1"
     mkdirp "^0.5.0"
     promise "^7.1.1"

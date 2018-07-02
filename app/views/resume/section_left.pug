@@ -4,7 +4,7 @@
       i(class="fas " + section_data.icon)
     if section_data.section_name
       span.topic-text !{section_data.section_name}
-  div !{section_data.desc}
+  .text-justify !{section_data.desc}
   div
   if section_data.list
     each list_item in section_data.list
