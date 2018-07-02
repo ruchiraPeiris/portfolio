@@ -26,11 +26,11 @@ exports.sendMail = function (data) {
     text: html
   };
 
-  return new Promise(function(resolve, reject) {
+  return new Promise((resolve, reject) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        reject({status: true, text: error});
+        reject({status: false, text: error});
       }
       else {
         resolve({status: true, text: info.messageId});

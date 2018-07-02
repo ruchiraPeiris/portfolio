@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   CurrentPage;
   CodeType = [
     `<b>Laravel:</b>^100\n&lt;?PHP^100\nclass HelloWorld extends Controller {\n  function sayHello(){\n   return 'Hello World';\n  }\n}`,
-    `<b>ES6:</b>^100\nlet helloWorld = (message) => {\n  console.log(message);\n}\nhelloWorld('Hello World')`,
+    `<b>ES6:</b>^100\nlet helloWorld = (message) => {\n  console.log(message);\n}\nhelloWorld('Hello World');`,
     `<b>SCSS:</b>^100\n$font-size: 12;\n@function helloWorld($greater) {\n  @return ($greater * $font-size)+px; \n}`,
     `<b>MySql:</b>^100\nCREATE FUNCTION helloWorld (s CHAR(20))\n  RETURNS CHAR(50)
   DETERMINISTIC RETURN CONCAT('Hello, ',s,'!');\nSELECT helloWorld('Hello World');`,

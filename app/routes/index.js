@@ -15,12 +15,14 @@ router.post('/say/hello', (req, res, next) => {
   }
 
 }, (req, res, next) => {
+
   const data = req.body;
   sendMail(data).then((success) => {
     res.send(success);
   }).catch(error => {
-    res.send(error);
+    res.status(500).send(error);
   });
+
 });
 
 router.get('/resume', (req, res, next) => {
