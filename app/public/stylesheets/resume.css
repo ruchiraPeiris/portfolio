@@ -6576,7 +6576,7 @@ body {
     #resume a {
       text-decoration: none; }
     #resume .print_page {
-      page-break-after: always; } }
+      page-break-before: auto; } }
 
 * {
   -webkit-print-color-adjust: exact !important;

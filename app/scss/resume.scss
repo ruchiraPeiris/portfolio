@@ -377,7 +377,7 @@ body {
       text-decoration: none;
     }
     .print_page {
-      page-break-after: always;
+      page-break-before: auto;
     }
   }
 

@@ -13,7 +13,7 @@
   </svg>
   <nav>
     <ul>
-      <li><a *ngFor="let item of MenuItems" (click)="showPage($event, item.name)" href="#">{{item.title}}</a></li>
+      <li><a *ngFor="let item of MenuItems" (click)="showPage($event, item.name, item.type, (item.value?item.value:'#'))" href="#">{{item.title}}</a></li>
     </ul>
   </nav>
 </div>

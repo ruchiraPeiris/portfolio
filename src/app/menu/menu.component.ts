@@ -19,6 +19,11 @@ export class MenuComponent implements OnInit {
     {
       'name': 'home',
       'title': 'Home'
+    }, {
+      'name': 'resume',
+      'title': 'Resume',
+      'value': 'https://serve.supun.xyz/resume',
+      'type': 'link',
     },
     {
       'name': 'details|portfolio',
@@ -40,10 +45,15 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  showPage($event, Page) {
-    $event.preventDefault();
-    this.showMenu('close');
-    return this.data.changeSlide(Page);
+  showPage($event, Page, type = 'page', value = '#') {
+    if (type === 'link') {
+      window.open(value, '_blank');
+      this.showMenu('close');
+    } else {
+      $event.preventDefault();
+      this.showMenu('close');
+      return this.data.changeSlide(Page);
+    }
   }
 
 

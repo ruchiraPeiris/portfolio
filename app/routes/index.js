@@ -114,7 +114,7 @@ router.get('/resume', (req, res, next) => {
       ],
       section_right: [
         {
-          img: "images/profile-2.jpg"
+          img: "images/profile.jpg"
         },
         {
           section_name: "Personal Info",
