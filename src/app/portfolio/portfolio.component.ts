@@ -13,7 +13,7 @@ export class PortfolioComponent implements OnInit {
   projects = [
     {
       code: 'hpc',
-      name: 'Holidays Package Creator',
+      name: 'Real Time Holidays Package Creator (V2)',
       url: '',
       tech: ['Laravel', 'Jquery', 'Gulp', 'SCSS', 'Leaflet', 'Google Api', 'Bootstrap', 'and more...'],
       image: 'assets/images/appleholidays.png'

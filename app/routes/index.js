@@ -33,7 +33,7 @@ router.get('/resume', (req, res, next) => {
       header: {
         first_name: "Supun",
         last_name: "Praneeth",
-        job: "Software Engineer"
+        job: "Full-stack developer"
       },
       section_left: [
         {
@@ -66,7 +66,7 @@ router.get('/resume', (req, res, next) => {
               },
             },
             {
-              first: "Developer",
+              first: "Full-stack developer",
               second: "Apple Holidays",
               icon: "fa-briefcase",
               from: "2014-10",
