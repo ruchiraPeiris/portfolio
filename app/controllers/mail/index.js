@@ -18,8 +18,8 @@ exports.sendMail = function (data) {
 
 
   let mailOptions = {
-    from: '"supun.xyz👻" <hello@supun.xyz>',
-    to: 'hello@supun.xyz',
+    from: '"supun.xyz👻" <contact@supun.xyz>',
+    to: 'contact@supun.xyz',
     replyTo: data.email,
     subject: 'Message from: ' + data['name'],
     html: html,

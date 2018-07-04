@@ -134,8 +134,8 @@ router.get('/resume', (req, res, next) => {
             },
             {
               title: "E-mail",
-              value: "hello@supun.xyz",
-              url: "mailto:hello@supun.xyz"
+              value: "contact@supun.xyz",
+              url: "mailto:contact@supun.xyz"
 
             },
             {
