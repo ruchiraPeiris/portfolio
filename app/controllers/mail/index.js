@@ -40,5 +40,4 @@ exports.sendMail = function (data) {
 
   });
 
-
 };

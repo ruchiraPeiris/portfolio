@@ -162,6 +162,11 @@ router.get('/resume', (req, res, next) => {
               title: "Stackoverflow",
               value: "stackoverflow.com/cv/supun",
               url: "//stackoverflow.com/cv/supun"
+            },
+            {
+              title: "Location",
+              value: "Colombo, Sri Lanka.",
+              url: "//www.google.com/maps/place/Colombo"
             }
           ]
         },
